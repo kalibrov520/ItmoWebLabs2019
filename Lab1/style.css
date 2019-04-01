@@ -1,1 +1,69 @@
-regrg
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#nav-bar {
+    background-color: lightslategray;
+    flex-basis: 48px;
+    flex-shrink: 0;
+}
+
+#content {
+    flex-grow: 1;
+    background-color: beige;
+    display: flex;
+    flex-direction: row;
+}
+
+#left-container {
+    display: flex;
+    flex-direction: row;
+    flex: 3 0;
+}
+
+#left-side {
+    flex: 1 0;
+    background-color: antiquewhite;
+}
+
+#content-side {
+    flex: 2 0;
+    background-color: darkkhaki;
+}
+
+#right-side {
+    flex: 1 0;
+    background-color: peachpuff;
+}
+
+@media only screen and (max-width: 1010px) {
+
+    #content {
+        flex-direction: column;
+    }
+
+    #left-container { /* top container now */
+        flex: 1 0;
+    }
+
+    #right-side {
+        flex: 48px 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    #left-side {
+        display: none;
+    }
+}
