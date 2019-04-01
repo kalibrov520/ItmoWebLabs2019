@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Tahoma, sans-serif, Arial, Helvetica;
+    margin: 0;
+    background: linear-gradient(to right, #00d2ff, #3a7bd5);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#container {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.lab {
+    margin: 20px;
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.lab:hover {
+    background-color: #ebebeb;
+    transform: scale(1.1, 1.1);
+}
+
+.lab h3, .lab h3:visited {
+    color: black;
+    text-align: center;
+}
