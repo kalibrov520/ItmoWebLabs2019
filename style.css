@@ -5,7 +5,7 @@
 body {
     font-family: Tahoma, sans-serif, Arial, Helvetica;
     margin: 0;
-    background: linear-gradient(to right, #00d2ff, #3a7bd5);
+    background: linear-gradient(to right, lightgoldenrodyellow, lightgoldenrodyellow);
     height: 100vh;
     display: flex;
     align-items: center;
