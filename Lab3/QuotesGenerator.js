@@ -8,7 +8,8 @@ function imageUrls() {
     return [
         [300, 200],
         [300, 300],
-        [200, 500]
+        [200, 500],
+        [500, 500]
     ]
         .map(([width, height]) => imageUrl(width, height))
 }
@@ -71,14 +72,8 @@ function wrappedLines(ctx, text, maxWidth) {
 
 function prepareCanvasContext() {
     const canvas = document.createElement("canvas");
-    canvas.height = 500;
-    canvas.width = 500;
-    canvas.onclick = function () {
-        const fakeLink = document.createElement('a');
-        fakeLink.download = 'canvas.png';
-        fakeLink.href = this.toDataURL();
-        fakeLink.click();
-    };
+    canvas.height = 1000;
+    canvas.width = 1000;
     document.body.appendChild(canvas);
     return canvas.getContext('2d');
 }
@@ -91,7 +86,8 @@ window.onload = () => {
             fetchQuote(),
             drawImage(ctx, 0, 0, images[0]),
             drawImage(ctx, 0, 200, images[1]),
-            drawImage(ctx, 300, 0, images[2])
+            drawImage(ctx, 300, 0, images[2]),
+            /*drawImage(ctx, 300, 500, images[3])*/
         ]
     ).then(([quotesData]) => {
         drawDarkenOverlay(ctx, 500, 500);
